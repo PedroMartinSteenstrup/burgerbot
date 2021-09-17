@@ -71,7 +71,7 @@ class Bot:
       page = requests.get(url)
       if page.status_code == 429:
         logging.info('exceeded rate limit. Sleeping for a while')
-        time.sleep(300)
+        time.sleep(600)
         next
       soup = BeautifulSoup(page.content, 'html.parser')
 
